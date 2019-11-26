@@ -28,8 +28,8 @@
 				// for (var i = 0; i < result.length; i++) {
 				// 	tempArray.push(result[i].Format + " : " + result[i].Value);
 				// }
-				console.log(result);
-				const title = get_title(result);
+				console.log(result[0].Value);
+				const title = get_title(result[0].Value);
 				if (title[0]) {
 					title = title[0].summary.title;
 					console.log("title:" + title);
