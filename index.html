@@ -33,9 +33,9 @@
 				console.log("title:" + title[0].summary.title);
 				if (title[0]) {
 					title = title[0].summary.title;
-					const result = search_with_raku(title);
-					console.log("楽天API返り値:" + result);
-					if (result >= 1) {
+					const search_result = search_with_raku(title);
+					console.log(search_result);
+					if (search_result >= 1) {
 						alert("楽天ストアで見つかった");
 					} else {
 						alert("見つかりませんでした");
