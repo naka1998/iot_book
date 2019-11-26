@@ -36,7 +36,7 @@
 					console.log("title:" + title);
 					const result = search_with_raku(title);
 					console.log("楽天API返り値:" + result);
-					if (value >= 1) {
+					if (result >= 1) {
 						alert("楽天ストアで見つかった");
 					} else {
 						alert("見つかりませんでした");
@@ -44,7 +44,7 @@
 				} else {
 					alert("検索に失敗(ISBNが間違っている可能性)")
 				}
-				Result.innerHTML = tempArray.join("<br />");
+				Result.innerHTML = result[0].Value.join("<br />");
 			} else {
 				if (result.length === 0) {
 					Result.innerHTML = "認識できません";
