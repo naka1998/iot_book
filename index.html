@@ -22,14 +22,14 @@
 		var canvas = document.getElementById("picture");
 		var ctx = canvas.getContext("2d");
 		JOB.Init();
-		JOB.SetImageCallback(function (result) {
+		JOB.SetImageCallback(async function (result) {
 			if (result.length > 0) {
 				// var tempArray = [];
 				// for (var i = 0; i < result.length; i++) {
 				// 	tempArray.push(result[i].Format + " : " + result[i].Value);
 				// }
 				console.log("result:" + result[0].Value);
-				const title = get_title(result[0].Value);
+				const title = await get_title(result[0].Value);
 				console.log("title:" + title);
 				if (title[0]) {
 					title = title[0].summary.title;
