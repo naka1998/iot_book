@@ -32,9 +32,7 @@ async function search_with_raku(title) {
       console.error(error);
     });
 };
-async function output(value) {
 
-}
 async function btn_click() {
   const value = input_form.value;
   console.log("入力値：" + value);
@@ -49,8 +47,4 @@ async function btn_click() {
     alert("検索に失敗(ISBNが間違っている可能性)")
   }
 }
-const input_form = document.getElementById("input_data");
-const run_btn = document.getElementById("run_btn");
-run_btn.addEventListener("click", btn_click, false);
-
 
