@@ -33,7 +33,7 @@
 				console.log("title:" + title[0].summary.title);
 				if (title[0]) {
 					title = title[0].summary.title;
-					const search_result = search_with_raku(title);
+					const search_result = await search_with_raku(title);
 					console.log(search_result);
 					if (search_result >= 1) {
 						alert("楽天ストアで見つかった");
