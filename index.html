@@ -24,12 +24,12 @@
 		JOB.Init();
 		JOB.SetImageCallback(async function (result) {
 			if (result.length > 0) {
-				var tempArray = [];
-				for (var i = 0; i < result.length; i++) {
-					tempArray.push(result[i].Format + " : " + result[i].Value);
-				}
-				console.log("a" + tempArray);
-				const title = get_title(tempArray);
+				// var tempArray = [];
+				// for (var i = 0; i < result.length; i++) {
+				// 	tempArray.push(result[i].Format + " : " + result[i].Value);
+				// }
+				console.log(result);
+				const title = get_title(result);
 				if (title[0]) {
 					title = title[0].summary.title;
 					console.log("title:" + title);
