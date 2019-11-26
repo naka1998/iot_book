@@ -32,19 +32,3 @@ async function search_with_raku(title) {
       console.error(error);
     });
 };
-
-async function btn_click() {
-  const value = input_form.value;
-  console.log("入力値：" + value);
-  let title = await get_title(value);
-  if (title[0]) {
-    title = title[0].summary.title;
-    console.log("title:" + title);
-    const result = await search_with_raku(title);
-    console.log("楽天API返り値:" + result);
-    await output(result);
-  } else {
-    alert("検索に失敗(ISBNが間違っている可能性)")
-  }
-}
-

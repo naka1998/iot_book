@@ -22,18 +22,19 @@
 		var canvas = document.getElementById("picture");
 		var ctx = canvas.getContext("2d");
 		JOB.Init();
-		JOB.SetImageCallback(async function (result) {
+		JOB.SetImageCallback(function (result) {
 			if (result.length > 0) {
 				// var tempArray = [];
 				// for (var i = 0; i < result.length; i++) {
 				// 	tempArray.push(result[i].Format + " : " + result[i].Value);
 				// }
-				console.log(result[0].Value);
+				console.log("result:" + result[0].Value);
 				const title = get_title(result[0].Value);
+				console.log("title:" + title);
 				if (title[0]) {
 					title = title[0].summary.title;
 					console.log("title:" + title);
-					const result = await search_with_raku(title);
+					const result = search_with_raku(title);
 					console.log("楽天API返り値:" + result);
 					if (value >= 1) {
 						alert("楽天ストアで見つかった");
