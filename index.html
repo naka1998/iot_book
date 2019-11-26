@@ -44,7 +44,7 @@
 				} else {
 					alert("検索に失敗(ISBNが間違っている可能性)")
 				}
-				Result.innerHTML = result[0].Value.join("<br />");
+				Result.innerHTML = result[0].Value;
 			} else {
 				if (result.length === 0) {
 					Result.innerHTML = "認識できません";
