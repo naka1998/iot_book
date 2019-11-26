@@ -29,11 +29,10 @@
 				// 	tempArray.push(result[i].Format + " : " + result[i].Value);
 				// }
 				console.log("result:" + result[0].Value);
-				const title = await get_title(result[0].Value);
-				console.log("title:" + title);
+				let title = await get_title(result[0].Value);
+				console.log("title:" + title[0].summary.title);
 				if (title[0]) {
 					title = title[0].summary.title;
-					console.log("title:" + title);
 					const result = search_with_raku(title);
 					console.log("楽天API返り値:" + result);
 					if (result >= 1) {
