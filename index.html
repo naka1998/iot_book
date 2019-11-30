@@ -10,7 +10,10 @@
 	<!-- <a href="StreamDemo.html" style="position:absolute;left:350px;">GetUserMedia Demo</a> -->
 	<div id="container">
 		<canvas width="320" height="240" id="picture"></canvas>
-		<input id="Take-Picture" type="file" accept="image/*;capture=camera" style="font-size:24px;" />
+		<label style="color: white;background-color: #006DD9;padding: 10px;border: double 4px #AAAAAA;">
+			ファイルを選択して下さい
+			<input id="Take-Picture" type="file" accept="image/*;capture=camera" style="display:none;" />
+		</label>
 		<p id="textbit"></p>
 	</div>
 	<script type="text/javascript" src="./JOB.js"></script>
