@@ -6,7 +6,7 @@ openDBのAPI(https://openbd.jp/)と
 async function get_title(value) {
   return fetch('https://api.openbd.jp/v1/get?isbn=' + value)
     .catch(error => {
-      console.error(error);
+      return "error"
     })
     .then(response => {
       console.log("status=" + response.status);
