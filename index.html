@@ -48,6 +48,7 @@
 					request_body = 2;
 				}
 				Result.innerHTML = result[0].Value;
+				console.log(JSON.stringify({ value: request_body }));
 				fetch('https://obniz.io/events/856/_m7kzavdYvVfqdYv7tOjFIT2w8M99Pyu/run',
 					{
 						method: 'POST',
