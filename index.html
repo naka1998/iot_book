@@ -31,7 +31,7 @@
 				console.log("result:" + result[0].Value);
 				let title = await get_title(result[0].Value);
 				console.log("title:" + title[0].summary.title);
-				let request_body = { value: 999 };
+				let request_body = { "value": 999 };
 				if (title[0]) {
 					title = title[0].summary.title;
 					const search_result = await search_with_raku(title);
