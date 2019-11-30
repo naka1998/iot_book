@@ -52,6 +52,10 @@
 				fetch('https://obniz.io/events/856/_m7kzavdYvVfqdYv7tOjFIT2w8M99Pyu/run',
 					{
 						method: 'POST',
+						headers: {
+							"Content-Type": "application/json; charset=utf-8",
+							// "Content-Type": "application/x-www-form-urlencoded",
+						},
 						body: JSON.stringify({ value: request_body })
 					})
 			} else {
