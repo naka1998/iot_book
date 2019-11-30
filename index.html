@@ -30,7 +30,7 @@
 				// }
 				console.log("result:" + result[0].Value);
 				let title = await get_title(result[0].Value);
-				console.log("title:" + title[0].summary.title);
+				console.log("title:" + title[0].summary);
 				let request_body;
 				if (title[0].summary) {
 					title = title[0].summary.title;
