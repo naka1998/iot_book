@@ -23,7 +23,7 @@
 		var ctx = canvas.getContext("2d");
 		JOB.Init();
 		JOB.SetImageCallback(async function (result) {
-			if (result[0].value) {
+			if (result[0].Value) {
 				// var tempArray = [];
 				// for (var i = 0; i < result.length; i++) {
 				// 	tempArray.push(result[i].Format + " : " + result[i].Value);
@@ -54,9 +54,7 @@
 						query: request_body
 					})
 			} else {
-				if (result.length === 0) {
-					Result.innerHTML = "認識できません";
-				}
+				Result.innerHTML = "認識できません";
 			}
 		});
 		JOB.PostOrientation = true;
