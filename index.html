@@ -10,7 +10,7 @@
 	<!-- <a href="StreamDemo.html" style="position:absolute;left:350px;">GetUserMedia Demo</a> -->
 	<div id="container">
 		<canvas width="320" height="240" id="picture"></canvas>
-		<input id="Take-Picture" type="file" accept="image/*;capture=camera" />
+		<input id="Take-Picture" type="file" accept="image/*;capture=camera" style="font-size:24px;" />
 		<p id="textbit"></p>
 	</div>
 	<script type="text/javascript" src="./JOB.js"></script>
@@ -32,7 +32,7 @@
 				let title = await get_title(result[0].Value);
 				console.log("title:" + title[0].summary);
 				let request_body;
-				if (!!title[0]) {
+				if (title[0]) {
 					title = title[0].summary.title;
 					const search_result = await search_with_raku(title);
 					console.log(search_result);
@@ -47,7 +47,6 @@
 					Result.innerHTML = "検索に失敗しました";
 					request_body = 2;
 				}
-				Result.innerHTML = result[0].Value;
 				console.log(JSON.stringify({ value: request_body }));
 				fetch('https://obniz.io/events/856/_m7kzavdYvVfqdYv7tOjFIT2w8M99Pyu/run',
 					{
