@@ -31,24 +31,23 @@
 				console.log("result:" + result[0].Value);
 				let title = await get_title(result[0].Value);
 				console.log("title:" + title[0].summary.title);
-				let request_body;
+				let request_body = { value: 999 };
 				if (title[0]) {
 					title = title[0].summary.title;
 					const search_result = await search_with_raku(title);
 					console.log(search_result);
 					if (search_result >= 1) {
 						alert("楽天ストアで見つかった");
-						request_body = 0;
+						request_body.value = 0;
 					} else {
 						alert("見つかりませんでした");
-						request_body = 1;
+						request_body.value = 1;
 					}
 				} else {
 					alert("検索に失敗(ISBNが間違っている可能性)")
-					request_body = 2;
+					request_body.value = 2;
 				}
 				Result.innerHTML = result[0].Value;
-				console.log(request_body);
 				fetch('https://obniz.io/events/856/_m7kzavdYvVfqdYv7tOjFIT2w8M99Pyu/run',
 					{
 						method: 'POST',
