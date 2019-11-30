@@ -37,14 +37,14 @@
 					const search_result = await search_with_raku(title);
 					console.log(search_result);
 					if (search_result >= 1) {
-						alert("楽天ストアで見つかった");
+						Result.innerHTML("楽天ストアで見つかりました");
 						request_body = 0;
 					} else {
-						alert("見つかりませんでした");
+						Result.innerHTML("見つかりませんでした");
 						request_body = 1;
 					}
 				} else {
-					alert("検索に失敗(ISBNが間違っている可能性)")
+					Result.innerHTML("検索に失敗しました");
 					request_body = 2;
 				}
 				Result.innerHTML = result[0].Value;
