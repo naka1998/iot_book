@@ -52,7 +52,7 @@
 				fetch('https://obniz.io/events/856/_m7kzavdYvVfqdYv7tOjFIT2w8M99Pyu/run',
 					{
 						method: 'POST',
-						query: JSON.stringify({ value: request_body })
+						body: JSON.stringify({ value: request_body })
 					})
 			} else {
 				Result.innerHTML = "認識できません";
