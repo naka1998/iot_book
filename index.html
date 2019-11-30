@@ -47,8 +47,13 @@
 					alert("検索に失敗(ISBNが間違っている可能性)")
 					request_body = 2;
 				}
-				fetch('https://obniz.io/events/856/_m7kzavdYvVfqdYv7tOjFIT2w8M99Pyu/run', { method: 'POST', body: request_body })
 				Result.innerHTML = result[0].Value;
+				console.log(request_body);
+				fetch('https://obniz.io/events/856/_m7kzavdYvVfqdYv7tOjFIT2w8M99Pyu/run',
+					{
+						method: 'POST',
+						body: request_body
+					})
 			} else {
 				if (result.length === 0) {
 					Result.innerHTML = "認識できません";
