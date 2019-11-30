@@ -31,11 +31,11 @@
 				console.log("result:" + result[0].Value);
 				let title = await get_title(result[0].Value);
 				console.log("title:" + title[0].summary.title);
+				let request_body;
 				if (title[0]) {
 					title = title[0].summary.title;
 					const search_result = await search_with_raku(title);
 					console.log(search_result);
-					let request_body;
 					if (search_result >= 1) {
 						alert("楽天ストアで見つかった");
 						request_body = 0;
