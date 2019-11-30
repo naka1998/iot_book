@@ -32,7 +32,7 @@
 				let title = await get_title(result[0].Value);
 				console.log("title:" + title[0].summary.title);
 				let request_body;
-				if (title[0]) {
+				if (title[0].summary) {
 					title = title[0].summary.title;
 					const search_result = await search_with_raku(title);
 					console.log(search_result);
